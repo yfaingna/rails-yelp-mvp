@@ -7,3 +7,19 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+#
+
+# Seed your restaurant database in db/seeds.rb with at least 5 valid restaurant records.
+# Added a gem faker here
+require "faker"
+
+puts "Destroy data"
+Restaurant.destroy_all
+puts "Data destroyed"
+
+puts "Creating restaurants..."
+5.times do
+  # Category has to be from the existing list - Class (Restaurant)::Constant (CATEGORIES).Random selection
+	restaurant = Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.street_address, category: Restaurant::CATEGORIES.sample )
+	puts "Created #{restaurant.name} restaurant"
+end

@@ -13,3 +13,58 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:wght@300;400;500;600&display=swap');
+
+ /* Background and base font */
+ body {
+  background-color: #f5f1e6; /* light beige */
+  color: rgb(101, 93, 68);
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* Titles font */
+h1, h2, h3, h4, h5 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Buttons to override Bootstrap */
+.btn-primary {
+  background-color: rgb(144, 133, 96);
+  border-color: rgb(144, 133, 96);
+  color: #f5f1e6; /* light beige text */
+}
+
+.btn-primary:hover {
+  background-color: rgb(101, 93, 68);
+  border-color: rgb(101, 93, 68);
+  color: #f5f1e6;
+}
+
+/* Outline buttons */
+.btn-outline-secondary {
+  color: rgb(101, 93, 68);
+  border-color: rgb(101, 93, 68);
+}
+
+.btn-outline-secondary:hover {
+  background-color: rgb(101, 93, 68);
+  color: #f5f1e6;
+}
+
+/* Cards to match the theme */
+.card {
+  border: none;
+  background-color: #ffffffcc; /* slightly soft white */
+}
+
+/* For links */
+.list-group-item a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.list-group-item a:hover {
+  color: rgb(144, 133, 96);
+}
